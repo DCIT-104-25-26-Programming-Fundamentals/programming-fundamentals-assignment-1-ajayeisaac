@@ -39,3 +39,41 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+def get_sum(nums):
+    total = 0
+    for x in nums:
+        total = total + x
+    return total
+
+def get_avg(nums):
+    return get_sum(nums) / len(nums)
+
+def get_max(nums):
+    hi = nums[0]
+    for x in nums:
+        if x > hi:
+            hi = x
+    return hi
+
+def get_min(nums):
+    lo = nums[0]
+    for x in nums:
+        if x < lo:
+            lo = x
+    return lo
+
+n = int(input("How many numbers? "))
+
+if n <= 0:
+    print("Error: Enter a number bigger than 0.")
+else:
+    nums = []
+    for i in range(n):
+        val = float(input(f"Enter number {i + 1}: "))
+        nums.append(val)
+
+    print("\nResults:")
+    print("Sum:    ", get_sum(nums))
+    print("Average:", get_avg(nums))
+    print("Maximum:", get_max(nums))
+    print("Minimum:", get_min(nums))

@@ -45,7 +45,7 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
-def stu_grade(score):
+def student_grade(score):
     if score < 0 or score > 100:
         return None
     elif score >= 80:
@@ -61,7 +61,7 @@ def stu_grade(score):
 
 if __name__ == "__main__":
     student_score = float(input("Enter student score (0-100): "))
-    grade = stu_grade(student_score)
+    grade = student_grade(student_score)
     if grade is None:
         print("Score must be between 0 and 100.")
     else:
