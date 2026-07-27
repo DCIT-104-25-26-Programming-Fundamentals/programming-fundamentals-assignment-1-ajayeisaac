@@ -65,7 +65,7 @@ def get_min(nums):
 n = int(input("How many numbers? "))
 
 if n <= 0:
-    print("Error: Enter a number bigger than 0.")
+    print("Enter a number bigger than 0.")
 else:
     nums = []
     for i in range(n):
