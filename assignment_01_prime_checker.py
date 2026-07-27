@@ -44,9 +44,7 @@ def is_prime(digit):
             return False          
     return True
 
-
 user_digit = int(input("Enter a number: "))
-
 
 if is_prime(user_digit):
     print(f"{user_digit} is a prime number.")
