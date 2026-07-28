@@ -55,3 +55,31 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+def single_table(num):
+    print("Multiplication Table for", num)
+    i = 1
+    while i <= 12:
+        result = num * i
+        print(num, " x ", i, " = ", result)
+        i = i + 1
+
+def tables_up_to_n(n):
+    for num in range(1, n+1):
+        single_table(num)
+        print("---------------------------")
+
+choice = input("Enter a number: ")
+choice = int(choice)
+
+if choice <= 0:
+    print("Error, must be positive number")
+else:
+    single_table(choice)
+
+    n = input("Enter N for bonus tables 1 to N: ")
+    n = int(n)
+
+    if n <= 0:
+        print("Error, must be positive number")
+    else:
+        tables_up_to_n(n)
