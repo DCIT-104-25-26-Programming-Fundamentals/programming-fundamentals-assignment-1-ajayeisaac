@@ -84,3 +84,25 @@ def add_matrices(matrix_a, matrix_b, rows, cols):
             new_row.append(sum_val)
         result.append(new_row)
     return result
+
+def multiply_matrices(matrix_a, matrix_b, rows_a, cols_a, cols_b):
+    result = []
+    for i in range(rows_a):
+        new_row = []
+        for j in range(cols_b):
+            cell_sum = 0
+            for k in range(cols_a):
+                cell_sum = cell_sum + (matrix_a[i][k] * matrix_b[k][j])
+            new_row.append(cell_sum)
+        result.append(new_row)
+    return result
+
+def read_matrix(rows):
+    matrix = []
+    for r in range(rows):
+        line = input(f"Enter row {r + 1}: ")
+        row_vals = []
+        for x in line.split():
+            row_vals.append(int(x))
+        matrix.append(row_vals)
+    return matrix
