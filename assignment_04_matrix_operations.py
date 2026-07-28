@@ -65,3 +65,12 @@ def print_matrix(matrix):
         for item in row:
             print(item, end=" ")
         print()
+        
+    def transpose_matrix(matrix, rows, cols):
+    result = []
+    for c in range(cols):
+        new_row = []
+        for r in range(rows):
+            new_row.append(matrix[r][c])
+        result.append(new_row)
+    return result    
