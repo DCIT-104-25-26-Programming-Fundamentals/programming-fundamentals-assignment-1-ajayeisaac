@@ -73,4 +73,14 @@ def print_matrix(matrix):
         for r in range(rows):
             new_row.append(matrix[r][c])
         result.append(new_row)
-    return result    
+    return result   
+
+def add_matrices(matrix_a, matrix_b, rows, cols):
+    result = []
+    for r in range(rows):
+        new_row = []
+        for c in range(cols):
+            sum_val = matrix_a[r][c] + matrix_b[r][c]
+            new_row.append(sum_val)
+        result.append(new_row)
+    return result
