@@ -65,15 +65,16 @@ def print_matrix(matrix):
         for item in row:
             print(item, end=" ")
         print()
-        
-    def transpose_matrix(matrix, rows, cols):
+
+
+def transpose_matrix(matrix, rows, cols):
     result = []
     for c in range(cols):
         new_row = []
         for r in range(rows):
             new_row.append(matrix[r][c])
         result.append(new_row)
-    return result   
+    return result
 
 def add_matrices(matrix_a, matrix_b, rows, cols):
     result = []
@@ -106,3 +107,41 @@ def read_matrix(rows):
             row_vals.append(int(x))
         matrix.append(row_vals)
     return matrix
+
+print("Transpose Matrix")
+r = int(input("Enter number of rows: "))
+c = int(input("Enter number of columns: "))
+mat = read_matrix(r)
+
+print("\nOriginal Matrix:")
+print_matrix(mat)
+
+transposed = transpose_matrix(mat, r, c)
+print("\nTransposed Matrix:")
+print_matrix(transposed)
+
+print(" Add Matrices")
+r_b = int(input("Enter number of rows: "))
+c_b = int(input("Enter number of columns: "))
+print("Matrix 1:")
+m1 = read_matrix(r_b)
+print("Matrix 2:")
+m2 = read_matrix(r_b)
+
+added_result = add_matrices(m1, m2, r_b, c_b)
+print("\nSum of Matrices:")
+print_matrix(added_result)
+
+print(" Multiply Matrices ")
+r_a = int(input("Enter Matrix A rows: "))
+c_a = int(input("Enter Matrix A columns (and Matrix B rows): "))
+c_b2 = int(input("Enter Matrix B columns: "))
+
+print("Matrix A:")
+mat_a = read_matrix(r_a)
+print("Matrix B:")
+mat_b = read_matrix(c_a)
+
+mult_result = multiply_matrices(mat_a, mat_b, r_a, c_a, c_b2)
+print("\nProduct Matrix (A x B):")
+print_matrix(mult_result)
