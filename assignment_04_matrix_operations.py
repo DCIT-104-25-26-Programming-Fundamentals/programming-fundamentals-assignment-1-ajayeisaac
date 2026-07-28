@@ -60,3 +60,8 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+def print_matrix(matrix):
+    for row in matrix:
+        for item in row:
+            print(item, end=" ")
+        print()
